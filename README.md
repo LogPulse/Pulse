@@ -1,6 +1,7 @@
 # Pulse
-[![GoDoc](https://godoc.org/github.com/gophergala2016/Pulse?status.svg)](https://godoc.org/github.com/gophergala2016/Pulse)
-[![Build Status](https://travis-ci.org/gophergala2016/Pulse.svg?branch=master)](https://travis-ci.org/gophergala2016/Pulse)
+[![GoDoc](https://godoc.org/github.com/LogPulse/Pulse?status.svg)](https://godoc.org/github.com/LogPulse/Pulse)
+[![Build Status](https://travis-ci.org/LogPulse/Pulse.svg?branch=master)](https://travis-ci.org/LogPulse/Pulse)
+[![Go Report Card Badge](http://goreportcard.com/badge/LogPulse/Pulse)](http://goreportcard.com/report/LogPulse/Pulse)
 
 ![Pulse](https://raw.githubusercontent.com/gophergala2016/Pulse/master/images/pulse_logo.png)
 
