@@ -1,5 +1,5 @@
 /*Package pulse uses a pattern identification algorithm created by Michael Dropps.
-The custom maching-learning algorithm identifies patterns that it finds in strings.
+The custom machine-learning algorithm identifies patterns that it finds in strings.
 This is better to use than Levenshtein distance because the unique features of input strings are
 stored and available for future lookups.  It is a more advanced approach than a simple distance comparison.
 The Levenshtein distance is used on first-pass comparisons to help the algorithm create initial patterns

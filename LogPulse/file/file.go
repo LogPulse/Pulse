@@ -1,4 +1,4 @@
-// Package file is used for reading and writting to files.
+// Package file is used for reading and writing to files.
 package file
 
 import (
@@ -44,7 +44,7 @@ func StreamRead(reader multipart.File, lineOut chan<- string) {
 	}()
 }
 
-// Write will append or create filename and write the slice of strings seperated by a new line.
+// Write will append or create filename and write the slice of strings separated by a new line.
 func Write(filename string, line string) {
 	outFile, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0600)
 	defer outFile.Close()
