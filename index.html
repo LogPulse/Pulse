@@ -29,9 +29,9 @@
       <div id="main" role="main">
         <div class="download-bar">
         <div class="inner">
-          <a href="https://github.com/gophergala2016/Pulse/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/gophergala2016/Pulse/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/gophergala2016/Pulse" class="code">View Pulse on GitHub</a>
+          <a href="https://github.com/LogPulse/Pulse/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/LogPulse/Pulse/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/LogPulse/Pulse" class="code">View Pulse on GitHub</a>
         </div>
         <span class="blc"></span><span class="trc"></span>
         </div>
@@ -39,25 +39,27 @@
           <h1>
 <a id="pulse" class="anchor" href="#pulse" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pulse</h1>
 
-<p><a href="https://godoc.org/github.com/gophergala2016/Pulse"><img src="https://godoc.org/github.com/gophergala2016/Pulse?status.svg" alt="GoDoc"></a>
-<a href="https://travis-ci.org/gophergala2016/Pulse"><img src="https://travis-ci.org/gophergala2016/Pulse.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://godoc.org/github.com/LogPulse/Pulse"><img src="https://godoc.org/github.com/LogPulse/Pulse?status.svg" alt="GoDoc"></a>
+<a href="https://travis-ci.org/LogPulse/Pulse"><img src="https://travis-ci.org/LogPulse/Pulse.svg?branch=master" alt="Build Status"></a>
+<a href="http://goreportcard.com/report/LogPulse/Pulse"><img src="http://goreportcard.com/badge/LogPulse/Pulse" alt="Go Report Card Badge"></a></p>
 
-<p><img src="https://raw.githubusercontent.com/gophergala2016/Pulse/master/images/pulse_logo.png" alt="Pulse"></p>
+<p><img src="https://raw.githubusercontent.com/LogPulse/Pulse/master/images/pulse_logo.png" alt="Pulse"></p>
 
 <p>Log pulse learns from your log files. It uses a machine learning algorithm that Michael Dropps came up with. It is a go package that can be consumed and used for use for anyone. The package itself just reads lines of strings and returns what it thinks is out of place. That way when you are trying to find that error in your logs, you don't spend hours searching and looking. We have made a simple application around it to show case it's ability.</p>
 
 <p>The application is simple. If you run it with no flags or arguments it will read the <code>PulseConfig.toml</code> file and read those files listed there. If you include arguments but no flags then the arguments must be filepaths to logs you want to read. EX <code>LogPulse someFile.log anotherFile.log waitHereIsAnother.log</code>.</p>
 
-<p>LogPulse accepts one flag <code>-api</code>. This is what is running our live demo. It accepts a file on an endpoint in the body and runs the algorithm. It will email the user when it is done with all the anomalies it could find (we are using MailGun). If you wanted to run local you could supply an SMTP config file (location is set in <code>PulseConfig.toml</code> and must be a toml file). This is were the credentials are so you are able to send emails locally. You could have the SMTP config file setup and run LogPulse without the <code>-api</code> flag and it would send emails as well. If no email option is set it will save all emails (subject and body) to the output file that is specified in the <code>PulseConfig.toml</code></p>
+<p>LogPulse accepts one flag <code>-api</code>. It accepts a file on an endpoint in the body and runs the algorithm. It will email the user when it is done with all the anomalies it could find (we are using MailGun). If you wanted to run local you could supply an SMTP config file (location is set in <code>PulseConfig.toml</code> and must be a toml file). This is were the credentials are so you are able to send emails locally. You could have the SMTP config file setup and run LogPulse without the <code>-api</code> flag and it would send emails as well. If no email option is set it will save all emails (subject and body) to the output file that is specified in the <code>PulseConfig.toml</code></p>
 
 <h1>
 <a id="content" class="anchor" href="#content" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Content</h1>
 
 <ul>
 <li><a href="#as-a-package">As A Package</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLVRxiozOhbUyYfLm_1FVRVgtgAMFZzfcq">Video Demonstration</a></li>
+<li><a href="https://youtu.be/KddVBH__ZHw">Video Demonstration</a></li>
+<li><a href="#install">Install</a></li>
 <li>
-<a href="#install">Install</a>
+<a href="#running">Running</a>
 
 <ul>
 <li><a href="#pulse-config">Pulse Config</a></li>
@@ -65,6 +67,7 @@
 </ul>
 </li>
 <li><a href="#team">Team</a></li>
+<li><a href="mailto:dixonwille@gmail.com">Support</a></li>
 </ul>
 
 <h2>
@@ -82,6 +85,11 @@
 <p>Installing is as simple as:</p>
 
 <p><code>go get github.com/gophergala2016/Pulse/LogPulse</code></p>
+
+<h2>
+<a id="running" class="anchor" href="#running" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running</h2>
+
+<p><code>go run main.go &lt;Path/to/File&gt;</code></p>
 
 <h3>
 <a id="pulse-config" class="anchor" href="#pulse-config" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pulse Config</h3>
@@ -155,7 +163,7 @@ PassWord = "LovelyPassword"
 </li>
 <li>Miguel Espinoza <a href="https://github.com/miguelespinoza">Github</a>
 </li>
-<li>Will Dixon <a href="https://github.com/dixonwille">Github</a>
+<li>Will Dixon <a href="https://github.com/dixonwille">Github</a> <a href="mailto:dixonwille@gmail.com">Email</a>
 </li>
 </ul>
         </article>
@@ -163,7 +171,7 @@ PassWord = "LovelyPassword"
     </div>
     <footer>
       <div class="owner">
-      <p><a href="https://github.com/gophergala2016" class="avatar"><img src="https://avatars3.githubusercontent.com/u/16773106?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/gophergala2016">gophergala2016</a> maintains <a href="https://github.com/gophergala2016/Pulse">Pulse</a></p>
+      <p><a href="https://github.com/LogPulse" class="avatar"><img src="https://avatars2.githubusercontent.com/u/16870383?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/LogPulse">LogPulse</a> maintains <a href="https://github.com/LogPulse/Pulse">Pulse</a></p>
 
 
       </div>
@@ -174,7 +182,7 @@ PassWord = "LovelyPassword"
   </div>
   <div class="current-section">
     <a href="#top">Scroll to top</a>
-    <a href="https://github.com/gophergala2016/Pulse/tarball/master" class="tar">tar</a><a href="https://github.com/gophergala2016/Pulse/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <a href="https://github.com/LogPulse/Pulse/tarball/master" class="tar">tar</a><a href="https://github.com/LogPulse/Pulse/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
     <p class="name"></p>
   </div>
 
