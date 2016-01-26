@@ -72,7 +72,7 @@ func startPulse(filenames []string) {
 	signal.Notify(c, os.Interrupt)
 	// On keyboard interrup cleanup the program
 	go func() {
-		for _ = range c {
+		for range c {
 			fmt.Println("Exiting for Keyboard Interupt")
 			os.Exit(0)
 		}
@@ -94,7 +94,7 @@ func checkList(filenames []string) {
 		if _, err := os.Stat(filename); os.IsNotExist(err) {
 			panic(fmt.Errorf("main.checkList: %s", err))
 		}
-		if len(filename) > 3 && filename[len(filename)-3:len(filename)] == ".gz" {
+		if len(filename) > 3 && filename[len(filename)-3:] == ".gz" {
 			if err := file.UnGZip(filename); err != nil {
 				panic(fmt.Errorf("main.checkList: %s", err))
 			}
