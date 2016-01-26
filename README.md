@@ -13,11 +13,13 @@ LogPulse accepts one flag `-api`. It accepts a file on an endpoint in the body a
 
 # Content
 - [As A Package](#as-a-package)
-- [Video Demonstration] (https://www.youtube.com/playlist?list=PLVRxiozOhbUyYfLm_1FVRVgtgAMFZzfcq)
+- [Video Demonstration] (https://youtu.be/KddVBH__ZHw)
 - [Install](#install)
+- [Running](#running)
   - [Pulse Config](#pulse-config)
   - [SMTP Config](#smtp-config)
 - [Team](#team)
+- [Support](mailto:dixonwille@gmail.com)
 
 ## As A Package
 To use the algorithm just import the package as such!
@@ -30,6 +32,9 @@ This package exposes the `Run(chan string, func(string))` function. You just nee
 Installing is as simple as:
 
 `go get github.com/gophergala2016/Pulse/LogPulse`
+
+## Running
+`go run main.go <Path/to/File>`
 
 ### Pulse Config
 The `PulseConfig.toml` needs to be located in the same directory as your executable. The file should look similar to this:
@@ -83,4 +88,4 @@ PassWord = "LovelyPassword"
 ## Team
 - Michael Dropps [Github](https://github.com/michaeldropps)
 - Miguel Espinoza [Github](https://github.com/miguelespinoza)
-- Will Dixon [Github](https://github.com/dixonwille)
+- Will Dixon [Github](https://github.com/dixonwille) [Email](mailto:dixonwille@gmail.com)
