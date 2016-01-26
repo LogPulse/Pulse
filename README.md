@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/LogPulse/Pulse.svg?branch=master)](https://travis-ci.org/LogPulse/Pulse)
 [![Go Report Card Badge](http://goreportcard.com/badge/LogPulse/Pulse)](http://goreportcard.com/report/LogPulse/Pulse)
 
-![Pulse](https://raw.githubusercontent.com/gophergala2016/Pulse/master/images/pulse_logo.png)
+![Pulse](https://raw.githubusercontent.com/LogPulse/Pulse/master/images/pulse_logo.png)
 
 Log pulse learns from your log files. It uses a machine learning algorithm that Michael Dropps came up with. It is a go package that can be consumed and used for use for anyone. The package itself just reads lines of strings and returns what it thinks is out of place. That way when you are trying to find that error in your logs, you don't spend hours searching and looking. We have made a simple application around it to show case it's ability.
 
